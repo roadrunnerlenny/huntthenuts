@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="level">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="snake">
+          <xs:complexType>
+            <xs:attribute name="snakeStartPosX" type="xs:unsignedByte" use="required" />
+            <xs:attribute name="snakeStartPosY" type="xs:unsignedByte" use="required" />
+            <xs:attribute name="offsetY" type="xs:double" use="optional" />
+            <xs:attribute name="filenameHead" type="xs:string" use="optional" />
+            <xs:attribute name="filenameTail" type="xs:string" use="optional" />
+            <xs:attribute name="filenameCollision" type="xs:string" use="optional" />
+            <xs:attribute name="filenameWin" type="xs:string" use="optional" />
+            <xs:attribute name="filenameGrow" type="xs:string" use="optional" />
+            <xs:attribute name="filenameShrink" type="xs:string" use="optional" />
+            <xs:attribute name="animated" type="xs:boolean" use="optional" />
+            <xs:attribute name="animationFrames" type="xs:unsignedByte" use="optional" />
+            <xs:attribute name="collisionFrames" type="xs:unsignedByte" use="optional" />
+            <xs:attribute name="winFrames" type="xs:unsignedByte" use="optional" />
+            <xs:attribute name="growFrames" type="xs:unsignedByte" use="optional" />
+            <xs:attribute name="shrinkFrames" type="xs:unsignedByte" use="optional" />
+            <xs:attribute name="animationDelay" type="xs:unsignedByte" use="optional" />
+            <xs:attribute name="collisionDelay" type="xs:unsignedByte" use="optional" />
+            <xs:attribute name="winDelay" type="xs:unsignedByte" use="optional" />
+            <xs:attribute name="growDelay" type="xs:unsignedByte" use="optional" />
+            <xs:attribute name="shrinkDelay" type="xs:unsignedByte" use="optional" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="apples">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="apple">
+                <xs:complexType>
+                  <xs:attribute name="img" type="xs:string" use="optional" />
+                  <xs:attribute name="offsetY" type="xs:double" use="optional" />
+                  <xs:attribute name="points" type="xs:integer" use="required" />
+                  <xs:attribute name="tailgrow" type="xs:unsignedByte" use="optional" />
+                  <xs:attribute name="special" type="xs:boolean" use="optional" />
+                  <xs:attribute name="type" type="xs:string" use="optional" />
+                  <xs:attribute name="value" type="xs:integer" use="optional" />
+                  <xs:attribute name="time" type="xs:integer" use="optional" />
+                  <xs:attribute name="prob" type="xs:integer" use="optional" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="objects">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="object" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="number" type="xs:unsignedByte" use="required" />
+                  <xs:attribute name="posX" type="xs:unsignedByte" use="required" />
+                  <xs:attribute name="posY" type="xs:unsignedByte" use="required" />
+                  <xs:attribute name="sizeX" type="xs:unsignedByte" use="required" />
+                  <xs:attribute name="sizeY" type="xs:unsignedByte" use="required" />
+                  <xs:attribute name="offsetY" type="xs:double" use="optional" />
+                  <xs:attribute name="name" type="xs:string" use="required" />
+                  <xs:attribute name="filename" type="xs:string" use="optional" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" use="required" />
+      <xs:attribute name="tileSize" type="xs:unsignedByte" use="optional" />
+      <xs:attribute name="background" type="xs:string" use="optional" />
+      <xs:attribute name="borderBackground" type="xs:string" use="optional" />
+      <xs:attribute name="width" type="xs:unsignedByte" use="required" />
+      <xs:attribute name="height" type="xs:unsignedByte" use="required" />
+      <xs:attribute name="targetScore" type="xs:integer" use="required" />
+      <xs:attribute name="startSpeed" type="xs:unsignedByte" use="optional" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

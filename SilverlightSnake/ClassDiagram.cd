@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SilverlightSnake.ViewModelBase">
+    <Position X="15.75" Y="7.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SilverlightSnake.Apple">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgEIAAABAAAAAAAAAAAAAACAAAAACAAA=</HashCode>
+      <FileName>Apple.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SilverlightSnake.Level">
+    <Position X="12.5" Y="0.5" Width="2.5" />
+    <NestedTypes>
+      <Delegate Name="SilverlightSnake.Level.ChangedScoreEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Level.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="SilverlightSnake.Level.HighScoreEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Level.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="SilverlightSnake.Level.ChangedSpeedEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Level.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="SilverlightSnake.Level.ShrinkingEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Level.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="SilverlightSnake.Level.InverseEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Level.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>QRRAEAQQARQMiBgBAUAAIAShSAAACAFAAhAAAoIBggM=</HashCode>
+      <FileName>Level.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SilverlightSnake.LevelBuilder">
+    <Position X="7.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABACAAAAACAAAAAAAAgAAAAIAAAAQAAIgAAAAA=</HashCode>
+      <FileName>LevelBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SilverlightSnake.LevelObject">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAAAAAAAAAAAAAAAEAAAAQAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LevelObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SilverlightSnake.MainPresenter">
+    <Position X="15.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAIAAAAgAAAAAAAA=</HashCode>
+      <FileName>MainPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SilverlightSnake.Position">
+    <Position X="15.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>Position.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SilverlightSnake.SLApple">
+    <Position X="9.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAQAAAAAAAAAAACACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SLApple.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SilverlightSnake.SLLevel">
+    <Position X="9.25" Y="9" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAEBRAMAAEAgCAAAAAQEIAAACAAAAAAAAAAAAI=</HashCode>
+      <FileName>SLLevel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SilverlightSnake.SLLevelBuilder">
+    <Position X="7.25" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAACAAAAAAAAgAAAAIAAAAQAAIgAAAAA=</HashCode>
+      <FileName>SLLevelBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SilverlightSnake.SLLevelObject">
+    <Position X="2.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQACAAAAAAAAACAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>SLLevelObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SilverlightSnake.SLSnake">
+    <Position X="4.5" Y="6.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EgAgABAAFACIAYRAAICBFAAAAACABNAAAUQAABAEBIA=</HashCode>
+      <FileName>SLSnake.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SilverlightSnake.SLTail">
+    <Position X="1" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQQAAAAEACAAQQAAAABEAQAgACAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>SLTail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SilverlightSnake.Snake">
+    <Position X="4.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAwUBAAEIAAAQAECQAAAAAAEAAAAKIAAAAAAAAAFAA=</HashCode>
+      <FileName>Snake.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SilverlightSnake.SnakeUtils">
+    <Position X="17.75" Y="0.5" Width="2" />
+    <NestedTypes>
+      <Enum Name="SilverlightSnake.SnakeUtils.Directions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SnakeUtils.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="SilverlightSnake.SnakeUtils.Collision" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SnakeUtils.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>IAAAgAAAAIAAAgAAFAQAEgAAAIgAIQABAQCAAAAAAwA=</HashCode>
+      <FileName>SnakeUtils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SilverlightSnake.Tail">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAUAAAEAAAgQAAAAAAAAAAAAAABAAABAAAAAEAAAA=</HashCode>
+      <FileName>Tail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="SilverlightSnake.AppleSpeciality">
+    <Position X="10.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAQAEAAAAAAAAAAAIAAAAAAAAAAAQAgAAAAARA=</HashCode>
+      <FileName>AppleSpeciality.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SilverlightSnake.SLAnimation">
+    <Position X="15.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAACCAEggAAkDAAAAAQAAIABAAYAAAAAAAAA=</HashCode>
+      <FileName>SLAnimation.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="SilverlightSnake.PresenterModes">
+    <Position X="17.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAgAAAEAAAAAAAAAAAAAAQAAAAAAAAIAAAAAAAAAAE=</HashCode>
+      <FileName>MainPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

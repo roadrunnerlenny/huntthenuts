@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<level xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Level.xsd"
+       name="Level 3" tileSize="20" background="NutsTheme/grass_bg" borderBackground="NutsTheme/border_hedge" 
+       width="20" height="10" startSpeed="5" targetScore="50">
+  <snake snakeStartPosX="9" snakeStartPosY="7" offsetY="-5" filenameHead="NutsTheme/squirrel_animation" filenameTail="NutsTheme/squirrel_animation" 
+         filenameCollision="NutsTheme/collision" filenameWin="NutsTheme/dance" filenameGrow="NutsTheme/grow" filenameShrink="NutsTheme/shrink" 
+         animated="True" animationFrames="4" animationDelay="2" 
+         collisionFrames="7" collisionDelay="3" winFrames="5" winDelay="5"  growFrames="2" growDelay="10" shrinkFrames="7" shrinkDelay="3" />
+  <apples>
+    <apple img="NutsTheme/nut" offsetY="-5" points="1" tailgrow="1" special="false" />
+    <apple img="NutsTheme/nuts" offsetY="-5" points="2" tailgrow="2" special="false" />
+    <apple img="NutsTheme/nut" offsetY="-5" points="1" tailgrow="2" special="false" />
+    <apple img="NutsTheme/nuts" offsetY="-5" points="2" tailgrow="2" special="true" type="normal" value="0" time="0" prob="50"/>
+    <apple img="NutsTheme/poison_nut" offsetY="-5" points="-1" tailgrow="0" special="true" type="shrinking" value="2" time="0" prob="33"/>
+    <apple img="NutsTheme/tlc" offsetY="-5" points="5" tailgrow="0" special="true" type="inverse" value="0" time="5" prob="33"/>
+    <apple img="NutsTheme/golden_nut" offsetY="-5" points="0" tailgrow="0" special="true" type="win" value="0" time="0" prob="0"/>
+
+  </apples>
+  <objects>
+    <object number="1" posX="2" posY="2" sizeX="2" sizeY="2" offsetY="-10" name="Tree" filename="NutsTheme/tree" />
+    <object number="1" posX="5" posY="2" sizeX="2" sizeY="2" offsetY="-10" name="Tree" filename="NutsTheme/tree" />
+    <object number="2" posX="16" posY="1" sizeX="3" sizeY="3" offsetY="-15" name="Big Tree" filename="NutsTheme/tree3" />
+    <object number="3" posX="5" posY="6" sizeX="3" sizeY="3" offsetY="-15" name="Big Tree" filename="NutsTheme/tree3" />
+    <object number="3" posX="17" posY="6" sizeX="2" sizeY="2" offsetY="-10" name="Tree" filename="NutsTheme/tree" />
+    <object number="3" posX="12" posY="8" sizeX="2" sizeY="2" offsetY="-10" name="Tree" filename="NutsTheme/tree" />
+  </objects>
+</level>

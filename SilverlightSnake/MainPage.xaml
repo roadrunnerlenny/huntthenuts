@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="SilverlightSnake.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400" Loaded="UserControl_Loaded" 
+    KeyDown="UserControl_KeyDown" xmlns:dataInput="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.Input">
+
+    <StackPanel>
+        <Grid Height="40" Name="ControlField" Width="400">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="45*" />
+                <ColumnDefinition Width="30*" />
+                <ColumnDefinition Width="265*" />
+                <ColumnDefinition Width="50*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Height="23" Margin="0,0,0,0" Name="ScoreText" Text="Nüsse:" FontFamily="Comic Sans MS" VerticalAlignment="Center" HorizontalAlignment="Center" Width="45" FontSize="14" TextAlignment="Center" Grid.Column="0" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="3,0" Name="ScoreDisplay" Text="0" VerticalAlignment="Center" Grid.Column="1" FontFamily="Comic Sans MS" FontSize="14" Width="40" TextAlignment="Left" />
+
+            <TextBlock Grid.Column="2"  
+                Height="23" Width="265" Margin="0,0"
+                HorizontalAlignment="Center"  VerticalAlignment="Center"
+                Text="{Binding Path=MessageText}" 
+                       Name="messageLabel"
+                FontSize="14" FontFamily="Comic Sans MS" TextAlignment="Center">
+            </TextBlock>
+
+            <Button Height="25" HorizontalAlignment="Center" Visibility="Collapsed" Margin="0,0" Name="GoButton" VerticalAlignment="Center" Width="40" Click="GoButton_Click" Grid.Column="3" BorderBrush="Black" Foreground="{x:Null}" Background="{x:Null}">
+                <Image Source="/SilverlightSnake;component/Content/NutsTheme/go_button.png" />
+            </Button>
+            <Button Height="25" HorizontalAlignment="Center" Margin="0,0" Name="PauseButton" VerticalAlignment="Center" Width="40" Click="PauseButton_Click" Grid.Column="3" BorderBrush="Black" Foreground="{x:Null}" Background="{x:Null}">
+                    <Image Source="/SilverlightSnake;component/Content/NutsTheme/pause_button.png" />
+            </Button>
+        </Grid>
+        <Border BorderThickness="5" Width="110" Height="110" HorizontalAlignment="Center" Name="BorderGameField" VerticalAlignment="Top" >
+            <Grid Name="GameField" Height="100" Width="100">
+                <StackPanel Name="Buttons" VerticalAlignment="Center" Width="100">
+                    <Button Height="25" HorizontalAlignment="Center" Margin="0,0" Name="Restartbutton" VerticalAlignment="Center" Width="100" Click="Restartbutton_Click" Background="{x:Null}" BorderBrush="Black" Foreground="{x:Null}" Visibility="Collapsed">
+                        <Image Source="/SilverlightSnake;component/Content/NutsTheme/start_button_ger.png" />
+                    </Button>
+                    <Button Height="25" HorizontalAlignment="Center" Margin="0,0" Name="NextLevelButton" Visibility="Collapsed" VerticalAlignment="Center" Width="100" BorderBrush="Black" Foreground="{x:Null}" Background="{x:Null}" Click="NextLevelButton_Click">
+                        <Image Source="/SilverlightSnake;component/Content/NutsTheme/nextlevel_button_ger.png" />
+                    </Button>
+                    <Button Height="25" HorizontalAlignment="Center" Margin="0,0" Name="RetireButton" Visibility="Collapsed" VerticalAlignment="Center" Width="100" BorderBrush="Black" Foreground="{x:Null}" Background="{x:Null}" Click="RetireButton_Click">
+                        <Image Source="/SilverlightSnake;component/Content/NutsTheme/retire_button_ger.png" />
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+        </Border>
+        <TextBlock Text="(c) 2010 von Andreas Lennartz" HorizontalAlignment="Center" VerticalAlignment="Bottom" 
+                           FontFamily="Comic Sans MS"/>
+    </StackPanel>
+</UserControl>

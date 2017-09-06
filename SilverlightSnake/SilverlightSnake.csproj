@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BAB69C1A-F949-407F-965C-1078050DFF8B}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SilverlightSnake</RootNamespace>
+    <AssemblyName>SilverlightSnake</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>SilverlightSnake.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>SilverlightSnake.App</SilverlightAppEntry>
+    <TestPageFileName>SilverlightSnakeTestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls.Data.Input, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apple.cs" />
+    <Compile Include="AppleSpeciality.cs" />
+    <Compile Include="AdditionalClasses\CollisionHitObjectException.cs" />
+    <Compile Include="AdditionalClasses\CollisionException.cs" />
+    <Compile Include="AdditionalClasses\CollisionHitItselfException.cs" />
+    <Compile Include="Level.cs" />
+    <Compile Include="LevelBuilder.cs" />
+    <Compile Include="AdditionalClasses\NoSpaceForApplesException.cs" />
+    <Compile Include="LevelObject.cs" />
+    <Compile Include="MainPresenter.cs" />
+    <Compile Include="Position.cs" />
+    <Compile Include="SLAnimation.cs" />
+    <Compile Include="SLApple.cs" />
+    <Compile Include="SLLevel.cs" />
+    <Compile Include="SLLevelBuilder.cs" />
+    <Compile Include="SLLevelObject.cs" />
+    <Compile Include="SLSnake.cs" />
+    <Compile Include="SLTail.cs" />
+    <Compile Include="Snake.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AdditionalClasses\SnakeEventArgs.cs" />
+    <Compile Include="Tail.cs" />
+    <Compile Include="SnakeUtils.cs" />
+    <Compile Include="AdditionalClasses\CollisionWallHitException.cs" />
+    <Compile Include="ViewModelBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="Levels\Level.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\AppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\NutsTheme\border_hedge.png" />
+    <Content Include="Content\NutsTheme\cola.png" />
+    <Content Include="Content\NutsTheme\collision.png" />
+    <Content Include="Content\NutsTheme\collision_1_1.png" />
+    <Content Include="Content\NutsTheme\collision_1_2.png" />
+    <Content Include="Content\NutsTheme\collision_1_3.png" />
+    <Content Include="Content\NutsTheme\collision_1_4.png" />
+    <Content Include="Content\NutsTheme\collision_2_1.png" />
+    <Content Include="Content\NutsTheme\collision_2_2.png" />
+    <Content Include="Content\NutsTheme\collision_2_3.png" />
+    <Content Include="Content\NutsTheme\collision_2_4.png" />
+    <Content Include="Content\NutsTheme\collision_3_1.png" />
+    <Content Include="Content\NutsTheme\collision_3_2.png" />
+    <Content Include="Content\NutsTheme\collision_3_3.png" />
+    <Content Include="Content\NutsTheme\collision_3_4.png" />
+    <Content Include="Content\NutsTheme\collision_4_1.png" />
+    <Content Include="Content\NutsTheme\collision_4_2.png" />
+    <Content Include="Content\NutsTheme\collision_4_3.png" />
+    <Content Include="Content\NutsTheme\collision_4_4.png" />
+    <Content Include="Content\NutsTheme\collision_5_1.png" />
+    <Content Include="Content\NutsTheme\collision_5_2.png" />
+    <Content Include="Content\NutsTheme\collision_5_3.png" />
+    <Content Include="Content\NutsTheme\collision_5_4.png" />
+    <Content Include="Content\NutsTheme\collision_6_1.png" />
+    <Content Include="Content\NutsTheme\collision_6_2.png" />
+    <Content Include="Content\NutsTheme\collision_6_3.png" />
+    <Content Include="Content\NutsTheme\collision_6_4.png" />
+    <Content Include="Content\NutsTheme\collision_7_1.png" />
+    <Content Include="Content\NutsTheme\collision_7_2.png" />
+    <Content Include="Content\NutsTheme\collision_7_3.png" />
+    <Content Include="Content\NutsTheme\collision_7_4.png" />
+    <Content Include="Content\NutsTheme\collision_no_animation.png" />
+    <Content Include="Content\NutsTheme\dance_1.png" />
+    <Content Include="Content\NutsTheme\dance_2.png" />
+    <Content Include="Content\NutsTheme\dance_3.png" />
+    <Content Include="Content\NutsTheme\dance_4.png" />
+    <Content Include="Content\NutsTheme\dance_5.png" />
+    <Resource Include="Content\NutsTheme\go_button.png" />
+    <Content Include="Content\NutsTheme\dance_no_animation.png" />
+    <Content Include="Content\NutsTheme\flower.png" />
+    <Content Include="Content\NutsTheme\golden_nut.png" />
+    <Content Include="Content\NutsTheme\grass_bg.png" />
+    <Resource Include="Content\NutsTheme\nextlevel_button.png" />
+    <Content Include="Content\NutsTheme\grow_1.png" />
+    <Content Include="Content\NutsTheme\grow_2.png" />
+    <Resource Include="Content\NutsTheme\nextlevel_button_ger.png" />
+    <Content Include="Content\NutsTheme\nut.png" />
+    <Content Include="Content\NutsTheme\nuts.png" />
+    <Resource Include="Content\NutsTheme\pause_button.png" />
+    <Content Include="Content\NutsTheme\poison_nut.png" />
+    <Content Include="Content\NutsTheme\retired.jpg" />
+    <Resource Include="Content\NutsTheme\retire_button.png" />
+    <Resource Include="Content\NutsTheme\retire_button_ger.png" />
+    <Content Include="Content\NutsTheme\shrink_1.png" />
+    <Content Include="Content\NutsTheme\shrink_2.png" />
+    <Content Include="Content\NutsTheme\shrink_3.png" />
+    <Content Include="Content\NutsTheme\shrink_4.png" />
+    <Content Include="Content\NutsTheme\shrink_5.png" />
+    <Content Include="Content\NutsTheme\shrink_6.png" />
+    <Content Include="Content\NutsTheme\shrink_7.png" />
+    <Content Include="Content\NutsTheme\squirrel_animation_1_1.png" />
+    <Content Include="Content\NutsTheme\squirrel_animation_1_2.png" />
+    <Content Include="Content\NutsTheme\squirrel_animation_1_3.png" />
+    <Content Include="Content\NutsTheme\squirrel_animation_1_4.png" />
+    <Content Include="Content\NutsTheme\squirrel_animation_2_1.png" />
+    <Content Include="Content\NutsTheme\squirrel_animation_2_2.png" />
+    <Content Include="Content\NutsTheme\squirrel_animation_2_3.png" />
+    <Content Include="Content\NutsTheme\squirrel_animation_2_4.png" />
+    <Content Include="Content\NutsTheme\squirrel_animation_3_1.png" />
+    <Content Include="Content\NutsTheme\squirrel_animation_3_2.png" />
+    <Content Include="Content\NutsTheme\squirrel_animation_3_3.png" />
+    <Content Include="Content\NutsTheme\squirrel_animation_3_4.png" />
+    <Content Include="Content\NutsTheme\squirrel_animation_4_1.png" />
+    <Content Include="Content\NutsTheme\squirrel_animation_4_2.png" />
+    <Content Include="Content\NutsTheme\squirrel_animation_4_3.png" />
+    <Content Include="Content\NutsTheme\squirrel_animation_4_4.png" />
+    <Content Include="Content\NutsTheme\squirrel_no_animation.png" />
+    <Resource Include="Content\NutsTheme\start_button.png" />
+    <Resource Include="Content\NutsTheme\start_button_ger.png" />
+    <Content Include="Content\NutsTheme\tlc.png" />
+    <Content Include="Content\NutsTheme\tree.png" />
+    <Content Include="Content\NutsTheme\tree3.png" />
+    <Content Include="DevNotes.txt" />
+    <Content Include="Levels\Level1.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Levels\Level4.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Levels\Level3.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Levels\Level2.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

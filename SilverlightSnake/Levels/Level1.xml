@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<level xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Level.xsd"
+       name="Level 1" tileSize="20" background="NutsTheme/grass_bg" borderBackground="NutsTheme/border_hedge"
+       width="20" height="10" startSpeed="20" targetScore="30">
+  <snake snakeStartPosX="5" snakeStartPosY="5" offsetY="-5" filenameHead="NutsTheme/squirrel_animation" filenameTail="NutsTheme/squirrel_animation"
+         filenameCollision="NutsTheme/collision" filenameWin="NutsTheme/dance" filenameGrow="NutsTheme/grow" filenameShrink="NutsTheme/shrink"
+         animated="true"
+         animationFrames="4" animationDelay="2"
+         collisionFrames="7" collisionDelay="3" winFrames="5" winDelay="5"
+         growFrames="2" growDelay="10" shrinkFrames="7" shrinkDelay="3"/>
+  <apples>
+    <apple img="NutsTheme/nut" offsetY="-5" points="1" tailgrow="1" special="false"/>
+    <apple img="NutsTheme/nut" offsetY="-5" points="1" tailgrow="1" special="false"/>
+    <apple img="NutsTheme/nut" offsetY="-5" points="1" tailgrow="1" special="false"/>
+    <apple img="NutsTheme/poison_nut" offsetY="-5" points="-1" tailgrow="0" special="true" type="shrinking" value="2" time="0" prob="50"/>
+    <apple img="NutsTheme/tlc" offsetY="-5" points="5" tailgrow="0" special="true" type="inverse" value="0" time="5" prob="20"/>
+    <apple img="NutsTheme/golden_nut" offsetY="-5" points="0" tailgrow="0" special="true" type="win" value="0" time="0" prob="0"/>
+    <apple img="NutsTheme/nuts" offsetY="-5" points="2" tailgrow="2" special="true" type="normal" value="0" time="0" prob="66"/>
+  </apples>
+  <objects>
+    <object number="1" posX="10" posY="5" sizeX="2" sizeY="2" offsetY="-10" name="Tree" filename="NutsTheme/tree" />
+    <object number="2" posX="15" posY="8" sizeX="2" sizeY="2" offsetY="-10" name="Tree" filename="NutsTheme/tree" />
+    <object number="3" posX="3" posY="3" sizeX="1" sizeY="1" offsetY="-8" name="Sunflower" filename="NutsTheme/flower" />
+    <object number="4" posX="6" posY="3" sizeX="1" sizeY="1" offsetY="-8" name="Sunflower" filename="NutsTheme/flower" />
+    <object number="4" posX="8" posY="3" sizeX="1" sizeY="1" offsetY="-8" name="Sunflower" filename="NutsTheme/flower" />
+  </objects>
+</level>
